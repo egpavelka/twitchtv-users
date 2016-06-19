@@ -1,0 +1,185 @@
+@import 'https://fonts.googleapis.com/css?family=Megrim|Mukta+Vaani:400,500|Share+Tech+Mono';
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#container
+{
+    font-family: 'Mukta Vaani', sans serif;
+
+    min-width: 500px;
+    max-width: 850px;
+    margin: 0 auto;
+
+    color: black;
+    border: 30px solid black;
+}
+
+#list-container
+{
+    margin: 20px;
+    padding: 8px;
+
+    border: 5px solid black;
+    border-radius: 25px;
+    box-shadow: 0 0 0 6px black;
+}
+
+#title
+{
+    display: flex;
+
+    margin: 20px;
+
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#twitch-title
+{
+    font: 4.5rem 'Megrim';
+    font-weight: 700;
+
+    padding: 20px;
+
+    color: white;
+    background-color: black;
+
+    flex: 1 2 auto;
+}
+
+#sort
+{
+    display: flex;
+
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.sortStatus,
+.inactive
+{
+    font: 1rem 'Share Tech Mono';
+
+    width: 5.25rem;
+    height: 5.25rem;
+    margin: 20px 15px;
+    padding: 2.125rem .05rem;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: white;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 0 0 3px white, 0 0 0 8px black;
+}
+
+.sortStatus:hover,
+.active
+{
+    cursor: pointer;
+
+    box-shadow: 0 0 0 3px #90d531, 0 0 0 8px black;
+}
+
+.list
+{
+    display: flex;
+
+    flex-flow: column nowrap;
+    align-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.list > div
+{
+    display: flex;
+
+    margin-bottom: 2px;
+
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex: 2 0 auto;
+}
+
+.list > div:first-child
+{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.list > div:last-child
+{
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.list > div > div
+{
+    min-width: 200px;
+    padding: 10px;
+
+    text-align: center;
+}
+
+.list > div > div:first-child
+{
+    min-width: 100px;
+}
+
+#showLogo
+{
+    flex: 2 0 auto;
+}
+
+#showLogo img
+{
+    width: 10vw;
+    max-width: 5rem;
+
+    border: .25rem solid white;
+    border-radius: 50%;
+}
+
+#showName,
+#showName a
+{
+    font-size: 1rem;
+    font-weight: 500;
+
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: black;
+
+    flex: 1 0 auto;
+}
+
+.online,
+.online #showName a
+{
+    color: #90d531;
+    background: #444;
+}
+
+.offline
+{
+    background: #777;
+}
+
+#showStatus
+{
+    flex: 2 0 auto;
+}
